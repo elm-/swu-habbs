@@ -1,34 +1,3 @@
-onReady = ->
-  angular.bootstrap document, [ 'app.example' ], strictDi: true
-
-
-if Meteor.isCordova
-  angular.element(document).on 'deviceready', onReady
-else
-  angular.element(document).ready onReady
-
-app.config [
-  '$urlRouterProvider'
-  '$stateProvider'
-  ($urlRouterProvider, $stateProvider) ->
-    $urlRouterProvider.otherwise '/tabs'
-    $stateProvider.state 'tabs',
-      url: '/tabs'
-      templateUrl: 'client/index.ng.html'
-      controller: 'TodoCtrl'
-    $stateProvider.state 'order1',
-      url: '/order1'
-      templateUrl: 'client/order1.ng.html'
-      controller: 'TodoCtrl'
-    $stateProvider.state 'order2',
-      url: '/order2'
-      templateUrl: 'client/order2.ng.html'
-      controller: 'TodoCtrl'
-]
-# subscribe to the two collections we use
-Meteor.subscribe 'Orders'
-Meteor.subscribe 'Projects'
-Meteor.subscribe 'Tasks'
 app.controller 'TodoCtrl', [
   '$scope'
   '$meteorCollection'

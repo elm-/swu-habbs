@@ -1,0 +1,17 @@
+<!-- Center content -->
+<ion-view>
+  <ion-header-bar class="bar bar-header bar-dark">
+    <button class="button button-icon" ng-click="toggleProjects()">
+      <i class="icon ion-navicon"></i><i class="fa fa-area-chart"></i>
+    </button>
+    <h1 class="title"><a ui-sref="order2" nav-transition="ios">{{activeProject().title}} 111</a></h1>
+    <!-- New Task button-->
+    <button class="button button-icon" ng-click="newTask()">
+      <i class="icon ion-compose"></i>
+    </button>
+  </ion-header-bar>
+  <ion-content has-header="true" scroll="true">
+    <div>Order Management</div>
+    <div><a ui-sref="confirm-order">Confirm Order</a></div>
+  </ion-content>
+</ion-view>
