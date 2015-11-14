@@ -16,7 +16,14 @@ app.config [
       url: '/tabs'
       templateUrl: 'client/index.ng.html'
       controller: 'TodoCtrl'
-    return
+    $stateProvider.state 'order1',
+      url: '/order1'
+      templateUrl: 'client/order1.ng.html'
+      controller: 'TodoCtrl'
+    $stateProvider.state 'order2',
+      url: '/order2'
+      templateUrl: 'client/order2.ng.html'
+      controller: 'TodoCtrl'
 ]
 # subscribe to the two collections we use
 Meteor.subscribe 'Orders'
@@ -26,16 +33,25 @@ app.controller 'TodoCtrl', [
   '$scope'
   '$meteorCollection'
   '$ionicModal'
+  '$state'
   '$rootScope'
   '$ionicSideMenuDelegate'
   '$ionicPopup'
   '$cordovaDatePicker'
-  ($scope, $meteorCollection, $ionicModal, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $cordovaDatePicker) ->
+  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $cordovaDatePicker) ->
     $scope.Orders = $scope.$meteorCollection(Orders)
     $scope.Projects = $scope.$meteorCollection(Projects)
     $scope.Tasks = $scope.$meteorCollection(Tasks)
     # A utility function for creating a new project
     # with the given projectTitle
+    #
+    #
+    $scope.gotoOrder2 = ->
+      $state.go("order2")
+
+    $scope.goto1 = ->
+      $state.go("order1")
+
 
     createProject = (projectTitle) ->
       newProject =

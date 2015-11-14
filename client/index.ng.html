@@ -6,12 +6,9 @@
       <button class="button button-icon" ng-click="toggleProjects()">
         <i class="icon ion-navicon"></i><i class="fa fa-area-chart"></i>
       </button>
-      <h1 class="title">{{activeProject().title}}</h1>
+      <h1 class="title" ui-sref="order2" nav-transition="ios">{{activeProject().title}}</h1>
       <!-- New Task button-->
       <button class="button button-icon" ng-click="newTask()">
-        <i class="icon ion-compose"></i>
-      </button>
-      <button class="button button-icon" ng-repeat="order in Orders" ng-click="newTask()">
         <i class="icon ion-compose"></i>
       </button>
     </ion-header-bar>
