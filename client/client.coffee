@@ -48,7 +48,7 @@ app.service("dataSession", ->
 
   console.log window.localStorage.getItem("dataSession"), existing
 
-  currentOrder: existing.currentOrder or {}
+  currentOrder: existing?.currentOrder or {}
   save: ->
     window.localStorage.setItem("dataSession", JSON.stringify(@))
 )
