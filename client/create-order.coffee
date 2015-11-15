@@ -16,6 +16,9 @@ app.controller 'CreateOrderCtrl', [
       dataSession.save()
       $state.go("place-order")
 
+    $scope.goBack = ->
+      $state.go("select-station")
+
 
     $scope.addProduct = (product) ->
       $scope.selectedProducts.push(product)

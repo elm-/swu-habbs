@@ -14,6 +14,9 @@ app.controller 'PlaceOrderCtrl', [
     $timeout(->
       order = {
         pickupCode: Math.ceil(Math.random() * 999).toString()
+        pickupTime: dataSession.currentOrder.pickupTime
+        username: dataSession.currentOrder.username
+        avatar: "avatar" + (Math.ceil(Math.random() * 7)) + ".jpg"
         shopId: dataSession.currentOrder.shop.id
         products: dataSession.currentOrder.selectedProducts.map (p) ->
           p["$$hashKey"] = undefined

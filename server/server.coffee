@@ -31,9 +31,6 @@ Shops.allow
 
 
 Meteor.startup ->
-  if (Orders.find({}).count() is 0)
-    Orders.insert({test: "123"})
-
   Shops.remove({})
   if (Shops.find({}).count() is 0)
     Shops.insert(
@@ -87,6 +84,6 @@ Meteor.startup ->
     )
 
   #to clean db
-  Orders.remove({})
+  #Orders.remove({})
   Orders.find().forEach (o) -> console.log o
   Shops.find().forEach (o) -> console.log o
