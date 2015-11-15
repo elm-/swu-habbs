@@ -10,12 +10,10 @@
     <ion-list ng-if="currentShop">
       <ion-item class="item-avatar-left" ng-class="{'picked-up': order.pickedUp}" ng-repeat="order in filteredOrders()" ng-click="setActiveOrder(order)">
         <img ng-src="/img/avatars/{{ order.avatar }}">
-        <p>{{ order.pickupCode }}</p>
-        <p>{{ order.pickupTime }}</p>
-        <p>{{ order.username }}</p>
+        <h2 style="overflow: hidden">{{ order.pickupCode }}</h2>
+        <p>{{ order.username }}, at {{ order.pickupTime }}</p>
+        <div class="order-subtitle"> {{ order.products.length}} items</div>
         <ion-option-button class="button-positive" ng-click="pickedUp(order)">Picked Up</ion-option-button>
-
-
         <div ng-if="activeOrder._id == order._id">
           <div ng-repeat="product in order.products">
             {{ product.name }}

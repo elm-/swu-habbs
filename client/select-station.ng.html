@@ -4,27 +4,44 @@
     <div class="title-image title-image-station1">
       <div class="title-image-overlay">
         <div class="title">
-          Utrecht, Centraal
+          Utrecht
+        </div>
+        <div class="subtitle">
+          Delivery at Station Centraal
         </div>
       </div>
     </div>
     <div class="content">
       <div class="route">
+        <div class="clear">
+          <div class="from-group">
+              <span class="fa fa-map-marker" style="font-size:13px"></span>
+          </div>
+          <div class="to-group">
+            <span class="fa fa-flag-checkered" style="font-size:13px"></span>
+          </div>
+        </div>
+        <div class="route-indicator clear">
+          <span class="route-done"></span>
+        </div>
         <div class="from-group">
-          <div class="start-icon">
+          <!--<div class="start-icon">
             <img src="/img/start.png" />
+          </div>-->
+          <div class="mini-label">
+            From
           </div>
           <div class="start-name">
             Amsterdam
           </div>
         </div>
-        <div class="route-indicator">
-          <div class="route-done"></div>
-          <div class="route-left"></div>
-        </div>
+
         <div class="to-group">
-          <div class="start-icon">
+          <!--<div class="start-icon">
             <img src="/img/end.png" />
+          </div>-->
+          <div class="mini-label">
+            To
           </div>
           <div class="start-name">
             Utrecht
@@ -35,16 +52,19 @@
 
       <div class="eta">
         <div class="label">
-          ETA Pickup
+          DELIVERY FOR
         </div>
         <div class="time-select">
-          11 : 35
+          11:35, today
         </div>
       </div>
       <div class="clear"></div>
 
 
       <div class="shop-index">
+        <div class="content-subtitle">
+          Locations available
+        </div>
         <div class="shop-item" ng-repeat="shop in shops" ng-click="createOrder(shop)">
           <img ng-src="/img/shops/{{ shop.logo }}" title="{{ shop.name }}"/>
         </div>

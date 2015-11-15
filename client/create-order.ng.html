@@ -7,7 +7,7 @@
           {{ shop.name }}
         </div>
         <div class="subtitle">
-          at Utrecht, Centraal
+          at Utrecht, Station Centraal
         </div>
       </div>
     </div>
@@ -20,23 +20,33 @@
           {{ totalPrice() | number:2 }} €
         </div>
         <div class="order-button" ng-click="placeOrder()">
-          Order
+          PRESS TO ORDER
         </div>
+
       </div>
       <div class="clear"></div>
 
       <div class="product-index">
-        <div class="product-item" ng-repeat="product in shop.products" ng-click="addProduct(product)">
+        <div class="content-subtitle">
+          Burgers
+        </div>
+        <div class="product-item" ng-repeat="product in shop.products">
           <div class="name">
             {{ product.name }}
 
-            <div class="count">
-              {{ productCount(product) }}
+            <div class="price">
+              {{ product.price | number:2 }} €
             </div>
           </div>
-          <div class="price">
-            {{ product.price | number:2 }} €
+          <div class="product-select" ng-click="addProduct(product)">
+            <div class="count" ng-if="productCount(product) > 0">
+              {{ productCount(product) }}
+            </div>
+            <div style="float:right">
+              <span class="fa fa-plus-square"></span>
+            </div>
           </div>
+
           <div class="clear"></div>
         </div>
       </div>
