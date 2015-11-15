@@ -12,13 +12,15 @@
       </div>
     </div>
     <div class="content">
-      <div class="eta">
-        <div class="label">
+      <div class="order-summary">
+        <div class="order-total">
           Your Total
         </div>
-        <div class="time-select">
+        <div class="order-price">
           {{ totalPrice() | number:2 }} €
-          <div ng-click="placeOrder()">Order</div>
+        </div>
+        <div class="order-button" ng-click="placeOrder()">
+          Order
         </div>
       </div>
       <div class="clear"></div>

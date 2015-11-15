@@ -2,9 +2,13 @@
 <ion-view>
   <div class="order-placement" style="background-image: url(/img/shops/{{ shop.cover }})">
     <div class="order-placement-overlay">
-      <div class="waiting-text">
+      <div class="pickup-text">
+        Code:<br />
+        <strong>{{ order.pickupCode }}</strong>
+        <br />
         Pick up your order at {{ shop.name }}
       </div>
+      <img class="map" src="/img/map1.png" />
     </div>
   </div>
 </ion-view>

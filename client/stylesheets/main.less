@@ -61,6 +61,26 @@ body {
 }
 
 
+.order-summary {
+  .order-total {
+    float: left;
+    width: 40%;
+  }
+
+  .order-price {
+    float: left;
+    width: 30%;
+  }
+
+  .order-button {
+    float: left;
+    background-color: @brand-red;
+    color: #ffffff;
+    width: 30%;
+    text-align: center;
+  }
+}
+
 
 .route {
   margin-top: 20px;
@@ -197,19 +217,33 @@ body {
     .gradient(#222222, transparent);
   }
 
-  .waiting-text {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 100px;
-
+  .waiting-text, .pickup-text {
     color: #ffffff;
     text-align: center;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 20px;
   }
+
+  .waiting-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 100px;
+  }
+
+  .map {
+    margin-top: 40px;
+    width: 90%;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .pickup-text {
+    margin-top: 100px;
+  }
 }
+
 
 .content {
   padding: 10px;
