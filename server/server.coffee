@@ -87,6 +87,6 @@ Meteor.startup ->
     )
 
   #to clean db
-  #Orders.remove({})
+  Orders.remove({})
   Orders.find().forEach (o) -> console.log o
   Shops.find().forEach (o) -> console.log o
