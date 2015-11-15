@@ -86,6 +86,7 @@ Meteor.startup ->
       cover: "starbucks-cover.jpg"
     )
 
+  #to clean db
+  #Orders.remove({})
   Orders.find().forEach (o) -> console.log o
-  Tasks.find().forEach (o) -> console.log o
   Shops.find().forEach (o) -> console.log o
