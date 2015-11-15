@@ -30,7 +30,12 @@ app.controller 'OrderManagementCtrl', [
     $scope.pickedUp = (order) ->
       order.pickedUp = not order.pickedUp
 
-    $timeout(->
-      $scope.currentShop = $scope.shops[0]
-    , 1000)
+
+    initShop = ->
+      if ($scope.shops[0]?)
+        $scope.currentShop = $scope.shops[0]
+      else
+        $timeout(initShop, 500)
+
+    $timeout(initShop, 500)
 ]
