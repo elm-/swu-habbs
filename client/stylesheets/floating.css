@@ -11,6 +11,7 @@
     -moz-transform:scale(0.6);
 }
 
+
 .f_circleG{
   position:absolute;
   background-color:rgba(255,255,255,0.33);
@@ -26,11 +27,11 @@
     -ms-animation-name:f_fadeG;
     -webkit-animation-name:f_fadeG;
     -moz-animation-name:f_fadeG;
-  animation-duration:2.44s;
-    -o-animation-duration:2.44s;
-    -ms-animation-duration:2.44s;
-    -webkit-animation-duration:2.44s;
-    -moz-animation-duration:2.44s;
+  animation-duration:1.04s;
+    -o-animation-duration:1.04s;
+    -ms-animation-duration:1.04s;
+    -webkit-animation-duration:1.04s;
+    -moz-animation-duration:1.04s;
   animation-iteration-count:infinite;
     -o-animation-iteration-count:infinite;
     -ms-animation-iteration-count:infinite;
@@ -46,81 +47,81 @@
 #frotateG_01{
   left:0;
   top:51px;
-  animation-delay:0.92s;
-    -o-animation-delay:0.92s;
-    -ms-animation-delay:0.92s;
-    -webkit-animation-delay:0.92s;
-    -moz-animation-delay:0.92s;
+  animation-delay:0.39s;
+    -o-animation-delay:0.39s;
+    -ms-animation-delay:0.39s;
+    -webkit-animation-delay:0.39s;
+    -moz-animation-delay:0.39s;
 }
 
 #frotateG_02{
   left:15px;
   top:15px;
-  animation-delay:1.22s;
-    -o-animation-delay:1.22s;
-    -ms-animation-delay:1.22s;
-    -webkit-animation-delay:1.22s;
-    -moz-animation-delay:1.22s;
+  animation-delay:0.52s;
+    -o-animation-delay:0.52s;
+    -ms-animation-delay:0.52s;
+    -webkit-animation-delay:0.52s;
+    -moz-animation-delay:0.52s;
 }
 
 #frotateG_03{
   left:51px;
   top:0;
-  animation-delay:1.53s;
-    -o-animation-delay:1.53s;
-    -ms-animation-delay:1.53s;
-    -webkit-animation-delay:1.53s;
-    -moz-animation-delay:1.53s;
+  animation-delay:0.65s;
+    -o-animation-delay:0.65s;
+    -ms-animation-delay:0.65s;
+    -webkit-animation-delay:0.65s;
+    -moz-animation-delay:0.65s;
 }
 
 #frotateG_04{
   right:15px;
   top:15px;
-  animation-delay:1.83s;
-    -o-animation-delay:1.83s;
-    -ms-animation-delay:1.83s;
-    -webkit-animation-delay:1.83s;
-    -moz-animation-delay:1.83s;
+  animation-delay:0.78s;
+    -o-animation-delay:0.78s;
+    -ms-animation-delay:0.78s;
+    -webkit-animation-delay:0.78s;
+    -moz-animation-delay:0.78s;
 }
 
 #frotateG_05{
   right:0;
   top:51px;
-  animation-delay:2.14s;
-    -o-animation-delay:2.14s;
-    -ms-animation-delay:2.14s;
-    -webkit-animation-delay:2.14s;
-    -moz-animation-delay:2.14s;
+  animation-delay:0.91s;
+    -o-animation-delay:0.91s;
+    -ms-animation-delay:0.91s;
+    -webkit-animation-delay:0.91s;
+    -moz-animation-delay:0.91s;
 }
 
 #frotateG_06{
   right:15px;
   bottom:15px;
-  animation-delay:2.44s;
-    -o-animation-delay:2.44s;
-    -ms-animation-delay:2.44s;
-    -webkit-animation-delay:2.44s;
-    -moz-animation-delay:2.44s;
+  animation-delay:1.04s;
+    -o-animation-delay:1.04s;
+    -ms-animation-delay:1.04s;
+    -webkit-animation-delay:1.04s;
+    -moz-animation-delay:1.04s;
 }
 
 #frotateG_07{
   left:51px;
   bottom:0;
-  animation-delay:2.75s;
-    -o-animation-delay:2.75s;
-    -ms-animation-delay:2.75s;
-    -webkit-animation-delay:2.75s;
-    -moz-animation-delay:2.75s;
+  animation-delay:1.17s;
+    -o-animation-delay:1.17s;
+    -ms-animation-delay:1.17s;
+    -webkit-animation-delay:1.17s;
+    -moz-animation-delay:1.17s;
 }
 
 #frotateG_08{
   left:15px;
   bottom:15px;
-  animation-delay:3.06s;
-    -o-animation-delay:3.06s;
-    -ms-animation-delay:3.06s;
-    -webkit-animation-delay:3.06s;
-    -moz-animation-delay:3.06s;
+  animation-delay:1.3s;
+    -o-animation-delay:1.3s;
+    -ms-animation-delay:1.3s;
+    -webkit-animation-delay:1.3s;
+    -moz-animation-delay:1.3s;
 }
 
 
