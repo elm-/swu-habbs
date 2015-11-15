@@ -6,6 +6,13 @@ app.controller 'PlaceOrderCtrl', [
   '$rootScope'
   '$ionicSideMenuDelegate'
   '$ionicPopup'
-  '$cordovaDatePicker'
-  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $cordovaDatePicker) ->
+  '$timeout'
+  'dataSession'
+  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $timeout, dataSession) ->
+    $scope.shop = dataSession.currentOrder.shop
+
+    $timeout(->
+      $state.go("confirm-order")
+    , 2500)
+
 ]

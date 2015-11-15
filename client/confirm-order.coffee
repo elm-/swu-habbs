@@ -6,6 +6,9 @@ app.controller 'ConfirmOrderCtrl', [
   '$rootScope'
   '$ionicSideMenuDelegate'
   '$ionicPopup'
-  '$cordovaDatePicker'
-  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $cordovaDatePicker) ->
+  'dataSession'
+  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, dataSession) ->
+    $scope.shop = dataSession.currentOrder.shop
+    $scope.selectedProducts = dataSession.currentOrder.selectedProducts
+
 ]

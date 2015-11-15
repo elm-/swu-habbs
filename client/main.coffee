@@ -6,8 +6,8 @@ app.controller 'TodoCtrl', [
   '$rootScope'
   '$ionicSideMenuDelegate'
   '$ionicPopup'
-  '$cordovaDatePicker'
-  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $cordovaDatePicker) ->
+  'dataSession'
+  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, dataSession) ->
     $scope.Orders = $scope.$meteorCollection(Orders)
     $scope.Projects = $scope.$meteorCollection(Projects)
     $scope.Tasks = $scope.$meteorCollection(Tasks)
@@ -109,7 +109,7 @@ app.controller 'TodoCtrl', [
         date: new Date
         mode: 'date'
       #var options = {date: new Date(), mode: 'time'}; for time
-      $cordovaDatePicker.show(options).then (date) ->
+      dataSession.show(options).then (date) ->
         task.date = date
         return
       return

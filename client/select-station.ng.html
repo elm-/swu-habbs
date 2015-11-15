@@ -1,17 +1,54 @@
 <!-- Center content -->
 <ion-view>
-  <ion-header-bar class="bar bar-header bar-dark">
-    <button class="button button-icon" ng-click="toggleProjects()">
-      <i class="icon ion-navicon"></i><i class="fa fa-area-chart"></i>
-    </button>
-    <h1 class="title"><a ui-sref="order2" nav-transition="ios">{{activeProject().title}} 111</a></h1>
-    <!-- New Task button-->
-    <button class="button button-icon" ng-click="newTask()">
-      <i class="icon ion-compose"></i>
-    </button>
-  </ion-header-bar>
   <ion-content has-header="true" scroll="true">
-    <div>Select Station</div>
-    <div><a ui-sref="create-order">Create</a></div>
+    <div class="title-image title-image-station1">
+      <div class="title-image-overlay">
+        <div class="title">
+          Utrecht, Centraal
+        </div>
+      </div>
+    </div>
+    <div class="content">
+      <div class="route">
+        <div class="from-group">
+          <div class="start-icon">
+            <img src="/img/start.png" />
+          </div>
+          <div class="start-name">
+            Amsterdam
+          </div>
+        </div>
+        <div class="route-indicator">
+          <div class="route-done"></div>
+          <div class="route-left"></div>
+        </div>
+        <div class="to-group">
+          <div class="start-icon">
+            <img src="/img/end.png" />
+          </div>
+          <div class="start-name">
+            Utrecht
+          </div>
+        </div>
+      </div>
+      <div class="clear"></div>
+
+      <div class="eta">
+        <div class="label">
+          ETA Pickup
+        </div>
+        <div class="time-select">
+          11 : 35
+        </div>
+      </div>
+      <div class="clear"></div>
+
+
+      <div class="shop-index">
+        <div class="shop-item" ng-repeat="shop in shops" ng-click="createOrder(shop)">
+          <img ng-src="/img/shops/{{ shop.logo }}" title="{{ shop.name }}"/>
+        </div>
+      </div>
+    </div>
   </ion-content>
 </ion-view>

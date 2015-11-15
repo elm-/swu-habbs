@@ -12,7 +12,7 @@ app.config [
   '$urlRouterProvider'
   '$stateProvider'
   ($urlRouterProvider, $stateProvider) ->
-    $urlRouterProvider.otherwise '/tabs'
+    $urlRouterProvider.otherwise '/select-station'
     $stateProvider.state 'tabs',
       url: '/tabs'
       templateUrl: 'client/index.ng.html'
@@ -38,11 +38,23 @@ app.config [
       url: '/order-management'
       templateUrl: 'client/order-management.ng.html'
       controller: 'OrderManagementCtrl'
-
-
 ]
+
+
+app.service("dataSession", ->
+  existing = null
+  if (window.localStorage.getItem("dataSession"))
+    existing = JSON.parse(window.localStorage.getItem("dataSession"))
+
+  console.log window.localStorage.getItem("dataSession"), existing
+
+  currentOrder: existing.currentOrder or {}
+  save: ->
+    window.localStorage.setItem("dataSession", JSON.stringify(@))
+)
 
 # subscribe to the two collections we use
 Meteor.subscribe 'Orders'
 Meteor.subscribe 'Projects'
 Meteor.subscribe 'Tasks'
+Meteor.subscribe 'Shops'

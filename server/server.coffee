@@ -1,7 +1,7 @@
 Meteor.publish 'Orders', ->
   Orders.find({})
-Meteor.publish 'Tasks', ->
-  Tasks.find({})
+Meteor.publish 'Shops', ->
+  Shops.find({})
 Meteor.publish 'Projects', ->
   Projects.find({})
 
@@ -21,7 +21,7 @@ Projects.allow
   remove: ->
     true
 
-Tasks.allow
+Shops.allow
   insert: ->
     true
   update: ->
@@ -34,6 +34,58 @@ Meteor.startup ->
   if (Orders.find({}).count() is 0)
     Orders.insert({test: "123"})
 
+  Shops.remove({})
+  if (Shops.find({}).count() is 0)
+    Shops.insert(
+      _id: "1"
+      name: "Burger King"
+      logo: "burgerking.png"
+      cover: "burgerking-cover.jpg"
+      products: [
+        id: "1"
+        name: "Burger 1"
+        price: 4.99
+      ,
+        id: "2"
+        name: "Burger 2"
+        price: 4.99
+      ,
+        id: "3"
+        name: "Burger 3"
+        price: 4.99
+      ]
+    )
+    Shops.insert(
+      _id: "2"
+      name: "DeBroodzaak"
+      logo: "broodzaak.png"
+      cover: "broodzaak-cover.jpg"
+    )
+    Shops.insert(
+      _id: "3"
+      name: "Julia's"
+      logo: "julias.png"
+      cover: "julias-cover.jpg"
+    )
+    Shops.insert(
+      _id: "4"
+      name: "Kiosk"
+      logo: "kiosk.png"
+      cover: "kiosk-cover.jpg"
+    )
+    Shops.insert(
+      _id: "5"
+      name: "Smullers"
+      logo: "smullers.png"
+      cover: "smullers-cover.jpg"
+    )
+    Shops.insert(
+      _id: "6"
+      name: "Star Bucks"
+      logo: "starbucks.png"
+      cover: "starbucks-cover.jpg"
+    )
+
   Orders.find().forEach (o) -> console.log o
   Tasks.find().forEach (o) -> console.log o
-  Projects.find().forEach (o) -> console.log o
+  Shops.find().forEach (o) -> console.log o

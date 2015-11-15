@@ -6,6 +6,6 @@ app.controller 'OrderManagementCtrl', [
   '$rootScope'
   '$ionicSideMenuDelegate'
   '$ionicPopup'
-  '$cordovaDatePicker'
-  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, $cordovaDatePicker) ->
+  'dataSession'
+  ($scope, $meteorCollection, $ionicModal, $state, $rootScope, $ionicSideMenuDelegate, $ionicPopup, dataSession) ->
 ]
